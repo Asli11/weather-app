@@ -12,11 +12,6 @@ app.set("view engine", "hbs");
 
 const PORT = 3000 || process.env.PORT;
 
-// app.get("/about", (req, res) => {
-// 	res.sendFile("about.html", {
-// 		root: path.join(__dirname, "../public"),
-// 	});
 
-// });
 
 app.listen(PORT, () => console.log(`listening on port ${PORT}`));
