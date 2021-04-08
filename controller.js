@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 require("dotenv").config();
-//const API_KEY = "2817b9f070d1b85500f9ff826d3f7013";
+
 
 const API_KEY = process.env.API_KEY;
 
