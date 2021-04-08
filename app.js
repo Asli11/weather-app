@@ -13,11 +13,6 @@ app.use("/", router);
 app.set("views", "views");
 app.set("view engine", "hbs");
 
-// app.get("/about", (req, res) => {
-// 	res.sendFile("about.html", {
-// 		root: path.join(__dirname, "../public"),
-// 	});
 
-// });
 
 app.listen(port, console.log(`listening on ${port}`));
