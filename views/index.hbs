@@ -1,50 +1,49 @@
-<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/styles.css" />
-		<title>Document</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<title>Weather App</title>
 	</head>
 	<body>
 		<div class="form">
 			<label>Enter city</label>
 			<form action="/" method="POST" autocomplete="off">
-			<input
-				autocomplete="off"
-				id="ct"
-				type="text"
-				name="city"
-				placeholder="cityname ex. London"
-			/>
-	
+				<input
+					autocomplete="off"
+					id="ct"
+					type="text"
+					name="city"
+					placeholder="cityname ex. London"
+				/>
+
 				<button type="submit">search</button>
 			</form>
 		</div>
 		<div class="location">
-			{{# if locals.cityname}}
+			{{#if locals.cityname}}
 
-			<h1 class="location-timezone"> {{locals.cityname}}</h1>
+				<h1 class="location-timezone"> {{locals.cityname}}</h1>
 
-			{{ else }}
-					<h1 class="location-timezone"> cityname</h1>
+			{{else}}
+				<h1 class="location-timezone"> cityname</h1>
 			{{/if}}
 
+			{{#if locals.icon}}
+				<img
+					id="icon"
+					src="https://openweathermap.org/img/wn/{{locals.icon}}.png"
+					alt="Icon"
+				/>
 
-			{{# if locals.icon}}
-			<img
-				id="icon"
-				src="https://openweathermap.org/img/wn/{{locals.icon}}.png"
-				alt="Icon"
-			/>
-			
-			{{ else}}
-			<img
-				id="icon"
-				src="http://openweathermap.org/img/wn/10d@2x.png"
-				alt="Icon"
-			/>
+			{{else}}
+				<img
+					id="icon"
+					src="http://openweathermap.org/img/wn/10d@2x.png"
+					alt="Icon"
+				/>
 			{{/if}}
 		</div>
 		<div class="temperature">
